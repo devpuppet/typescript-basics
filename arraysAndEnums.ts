@@ -7,15 +7,42 @@ let student = {
     Language: Language.English
 };
 
-let studentsList = [
+exports.studentsList = [
     { Name: "Sara", Age: 18, Phone: 101010, Language: Language.English },
     { Name: "Robcio", Age: 1, Phone: 1000, Language: Language.Polish }
 ];
 
-studentsList.push(student);
+//studentsList.push(student);
 
-for (let index = 0; index < studentsList.length; index++) {
-    const element = studentsList[index];
-    console.log(element);
+// for (let index = 0; index < studentsList.length; index++) {
+//     const element = studentsList[index];
+//     console.log(element);
+// }
+
+exports.printStudentsList = function printStudentsList(students: any[]) {
+    students.forEach(student => {
+        console.log("Age: " + student.Age 
+        + " with Name: " + student.Name 
+        + " has Phone: " + student.Phone 
+        + " knows language: " + student.Language)
+    });
 }
 
+// getStudentsList(studentsList);
+
+// Rest Parameters
+exports.getNumbers = function getNumbers(...nums: number[]) {
+    nums.forEach(number => {
+            console.log("Number: " + number);
+    });
+}
+
+// getNumbers(1,2,3,4,5);
+
+// Default parameter
+exports.getInfo = function getInfo(info:string = "Happy:)") {
+    console.log(info);
+}
+
+// getInfo();
+// getInfo("Happy as well :)");

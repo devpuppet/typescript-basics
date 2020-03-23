@@ -13,7 +13,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/arraysAndEnums.ts",
+            "program": "${workspaceFolder}/functions.ts",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]

@@ -1,0 +1,23 @@
+{
+  "name": "typescripttest",
+  "version": "1.0.0",
+  "description": "Exercise project for NodeJS and Typescript",
+  "main": "functions.js",
+  "dependencies": {
+    "@types/node": "^13.9.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qkiz288/typescript-basics.git"
+  },
+  "author": "Kamil Kukiełka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Qkiz288/typescript-basics/issues"
+  },
+  "homepage": "https://github.com/Qkiz288/typescript-basics#readme"
+}
