@@ -11,4 +11,12 @@ getNumbers(1, 15);
 var info = arraysAndEnums.getInfo;
 info("Very happy");
 info();
+// Anonymous function
+var studentName = function (lastName, firstName) {
+    return firstName + "..." + lastName;
+};
+console.log(studentName("John", "Johnson"));
+// Arrow function
+var studentFullName = function (lastName, firstName) { return firstName + ", " + lastName; };
+console.log(studentFullName("Tom", "Thompson"));
 //# sourceMappingURL=functions.js.map

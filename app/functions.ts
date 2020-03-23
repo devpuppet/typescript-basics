@@ -14,3 +14,15 @@ getNumbers(1,15);
 var info = arraysAndEnums.getInfo;
 info("Very happy");
 info();
+
+// Anonymous function
+let studentName = function(lastName: string, firstName: string) {
+    return firstName + "..." + lastName
+}
+
+console.log(studentName("John", "Johnson"));
+
+// Arrow function
+let studentFullName = (lastName: string, firstName: string) => {return firstName + ", " + lastName}
+
+console.log(studentFullName("Tom", "Thompson"));
