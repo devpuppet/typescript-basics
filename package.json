@@ -2,7 +2,7 @@
   "name": "typescripttest",
   "version": "1.0.0",
   "description": "Exercise project for NodeJS and Typescript",
-  "main": "functions.js",
+  "main": "StudentInfo.js",
   "dependencies": {
     "@types/node": "^13.9.3"
   },

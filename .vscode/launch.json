@@ -13,7 +13,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/app/functions.ts",
+            "program": "${workspaceFolder}/app/interfaces/StudentInfo.ts",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
