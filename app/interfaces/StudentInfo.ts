@@ -1,7 +1,7 @@
 var arraysAndEnums = require('../arraysAndEnums.js');
 var Language = require('../constants/Language.js').Language;
 
-interface StudentInfo {
+export interface StudentInfo {
      Name: string,
      Age: number,
      Phone: number,
@@ -18,5 +18,3 @@ let student: StudentInfo = {
 let students = [student];
 
 arraysAndEnums.printStudentsList(students);
-
-export {}

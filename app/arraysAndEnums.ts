@@ -1,3 +1,5 @@
+import { StudentInfo } from "./interfaces/StudentInfo"
+
 enum Language { English = "English", Polish = "Polish" };
 
 let student = {
@@ -12,6 +14,12 @@ exports.studentsList = [
     { Name: "Robcio", Age: 1, Phone: 1000, Language: Language.Polish }
 ];
 
+let studentsListGeneric: Array<StudentInfo> = [
+    { Name: "Sara", Age: 18, Phone: 101010, Language: Language.English },
+    { Name: "Robcio", Age: 1, Phone: 1000, Language: Language.Polish }
+];
+exports.studentsListGeneric = studentsListGeneric;
+
 //studentsList.push(student);
 
 // for (let index = 0; index < studentsList.length; index++) {
@@ -22,6 +30,15 @@ exports.studentsList = [
 exports.printStudentsList = function printStudentsList(students: any[]) {
     students.forEach(student => {
         console.log("Age: " + student.Age 
+        + " with Name: " + student.Name 
+        + " has Phone: " + student.Phone 
+        + " knows language: " + student.Language)
+    });
+}
+
+exports.printStudentsListGeneric = function printStudentsListGeneric(students: Array<StudentInfo>) {
+    students.forEach(student => {
+        console.log("Age: " + student.Age
         + " with Name: " + student.Name 
         + " has Phone: " + student.Phone 
         + " knows language: " + student.Language)

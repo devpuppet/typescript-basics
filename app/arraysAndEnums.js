@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var Language;
 (function (Language) {
     Language["English"] = "English";
@@ -14,12 +16,25 @@ exports.studentsList = [
     { Name: "Sara", Age: 18, Phone: 101010, Language: Language.English },
     { Name: "Robcio", Age: 1, Phone: 1000, Language: Language.Polish }
 ];
+var studentsListGeneric = [
+    { Name: "Sara", Age: 18, Phone: 101010, Language: Language.English },
+    { Name: "Robcio", Age: 1, Phone: 1000, Language: Language.Polish }
+];
+exports.studentsListGeneric = studentsListGeneric;
 //studentsList.push(student);
 // for (let index = 0; index < studentsList.length; index++) {
 //     const element = studentsList[index];
 //     console.log(element);
 // }
 exports.printStudentsList = function printStudentsList(students) {
+    students.forEach(function (student) {
+        console.log("Age: " + student.Age
+            + " with Name: " + student.Name
+            + " has Phone: " + student.Phone
+            + " knows language: " + student.Language);
+    });
+};
+exports.printStudentsListGeneric = function printStudentsListGeneric(students) {
     students.forEach(function (student) {
         console.log("Age: " + student.Age
             + " with Name: " + student.Name
