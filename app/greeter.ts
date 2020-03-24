@@ -18,3 +18,5 @@ function greeter (person: Person) {
 let user = new Student("Sara", "Dearest", "Puppet");
 
 console.log(greeter(user));
+
+export {};
