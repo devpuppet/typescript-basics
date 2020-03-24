@@ -1,12 +1,13 @@
 var arraysAndEnums = require('../arraysAndEnums.js');
 var Language = require('../constants/Language.js').Language;
 
-export interface StudentInfo {
+interface StudentInfo {
      Name: string,
      Age: number,
      Phone: number,
      Language: string
 }
+ export { StudentInfo as StInfo }
 
 let student: StudentInfo = {
     Name: "John",

@@ -1,4 +1,4 @@
-export class Student {
+export default class Student {
 
     constructor(private lastName: string, private firstName: string) {
     }

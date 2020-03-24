@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Student_1 = require("./classes/Student");
 var arrays = require("./arraysAndEnums.js");
 // instantiate object
-var student = new Student_1.Student("Johnson", "John");
+var student = new Student_1.default("Johnson", "John");
 console.log(student.getFullName());
 // use of generics
 var students = arrays.studentsListGeneric;

@@ -1,8 +1,8 @@
-import { Student } from "./classes/Student"
+import DefaultStudent from "./classes/Student"
 var arrays = require("./arraysAndEnums.js");
 
 // instantiate object
-let student = new Student("Johnson", "John");
+let student = new DefaultStudent("Johnson", "John");
 console.log(student.getFullName());
 
 // use of generics
