@@ -1,0 +1,1 @@
+export type Style = 'bold' | 'italic' | 23;
