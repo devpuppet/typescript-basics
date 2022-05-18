@@ -1,6 +1,6 @@
 var arraysAndEnums = require('./arraysAndEnums.js');
 // Parameters with types (fixed, defined type)
-var students = arraysAndEnums.studentsList;
+let students = arraysAndEnums.studentsList;
 var printStudents = arraysAndEnums.printStudentsList;
 printStudents(students);
 // Rest parameters (provide as many arguments as you want, they must be of the same type)
@@ -12,11 +12,11 @@ var info = arraysAndEnums.getInfo;
 info("Very happy");
 info();
 // Anonymous function
-var studentName = function (lastName, firstName) {
+let studentName = function (lastName, firstName) {
     return firstName + "..." + lastName;
 };
 console.log(studentName("John", "Johnson"));
 // Arrow function
-var studentFullName = function (lastName, firstName) { return firstName + ", " + lastName; };
+let studentFullName = (lastName, firstName) => { return firstName + ", " + lastName; };
 console.log(studentFullName("Tom", "Thompson"));
 //# sourceMappingURL=functions.js.map
