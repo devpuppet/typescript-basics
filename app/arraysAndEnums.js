@@ -1,12 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var Language;
 (function (Language) {
     Language["English"] = "English";
     Language["Polish"] = "Polish";
 })(Language || (Language = {}));
 ;
-var student = {
+let student = {
     Name: "Kamil",
     Age: 30,
     Phone: 123123,
@@ -16,7 +14,7 @@ exports.studentsList = [
     { Name: "Sara", Age: 18, Phone: 101010, Language: Language.English },
     { Name: "Robcio", Age: 1, Phone: 1000, Language: Language.Polish }
 ];
-var studentsListGeneric = [
+let studentsListGeneric = [
     { Name: "Sara", Age: 18, Phone: 101010, Language: Language.English },
     { Name: "Robcio", Age: 1, Phone: 1000, Language: Language.Polish }
 ];
@@ -27,7 +25,7 @@ exports.studentsListGeneric = studentsListGeneric;
 //     console.log(element);
 // }
 exports.printStudentsList = function printStudentsList(students) {
-    students.forEach(function (student) {
+    students.forEach(student => {
         console.log("Age: " + student.Age
             + " with Name: " + student.Name
             + " has Phone: " + student.Phone
@@ -35,7 +33,7 @@ exports.printStudentsList = function printStudentsList(students) {
     });
 };
 exports.printStudentsListGeneric = function printStudentsListGeneric(students) {
-    students.forEach(function (student) {
+    students.forEach(student => {
         console.log("Age: " + student.Age
             + " with Name: " + student.Name
             + " has Phone: " + student.Phone
@@ -44,19 +42,14 @@ exports.printStudentsListGeneric = function printStudentsListGeneric(students) {
 };
 // getStudentsList(studentsList);
 // Rest Parameters
-exports.getNumbers = function getNumbers() {
-    var nums = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        nums[_i] = arguments[_i];
-    }
-    nums.forEach(function (number) {
+exports.getNumbers = function getNumbers(...nums) {
+    nums.forEach(number => {
         console.log("Number: " + number);
     });
 };
 // getNumbers(1,2,3,4,5);
 // Default parameter
-exports.getInfo = function getInfo(info) {
-    if (info === void 0) { info = "Happy:)"; }
+exports.getInfo = function getInfo(info = "Happy:)") {
     console.log(info);
 };
 // getInfo();

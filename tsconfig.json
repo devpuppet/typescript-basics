@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
-      "target": "es5",
+      "target": "es6",
       "watch": true,
-      "module": "commonjs",
+      // "module": "commonjs", // to make exports work in the browser
       "sourceMap": true,
       "lib": ["dom", "es2017"],
       "experimentalDecorators": true
