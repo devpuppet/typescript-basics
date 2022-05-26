@@ -37,7 +37,7 @@ const v1 = new Car();
 const v2 = new Truck();
 function useVehicle(vehicle) {
     vehicle.drive();
-    if (vehicle instanceof Truck) {
+    if (vehicle instanceof Truck) { // type guard
         vehicle.loadCargo(1);
     }
 }
