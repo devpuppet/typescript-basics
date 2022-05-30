@@ -1,1 +1,1 @@
-{"version":3,"file":"discriminatedUnionsPattern.js","sourceRoot":"","sources":["discriminatedUnionsPattern.ts"],"names":[],"mappings":""}
+{"version":3,"file":"discriminatedUnionsPattern.js","sourceRoot":"","sources":["discriminatedUnionsPattern.ts"],"names":[],"mappings":"AAYA,SAAS,UAAU,CAAC,MAAc;IAC9B,IAAI,KAAK,CAAC;IACV,QAAQ,MAAM,CAAC,IAAI,EAAE;QACjB,KAAK,MAAM;YACP,KAAK,GAAG,MAAM,CAAC,WAAW,CAAC;YAC3B,MAAM;QACV,KAAK,OAAO;YACR,KAAK,GAAG,MAAM,CAAC,YAAY,CAAC;KACnC;IACD,OAAO,CAAC,GAAG,CAAC,qBAAqB,GAAG,KAAK,CAAC,CAAA;AAC9C,CAAC"}
