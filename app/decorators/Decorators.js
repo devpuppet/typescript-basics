@@ -76,4 +76,30 @@ function DecoratorParameter(target, name, position) {
     console.log(target, name, position);
 }
 const product = new Product('Tooth paste', 1.23);
+function Autobind(_, _2, descriptor) {
+    const originalMethod = descriptor.value;
+    const adjustedDescriptor = {
+        configurable: true,
+        enumerable: false,
+        get() {
+            const boundFunction = originalMethod.bind(this);
+            return boundFunction;
+        }
+    };
+    return adjustedDescriptor;
+}
+class Printer {
+    constructor() {
+        this.message = 'Printer message';
+    }
+    showMessage() {
+        console.log(this.message);
+    }
+}
+__decorate([
+    Autobind
+], Printer.prototype, "showMessage", null);
+const printer = new Printer();
+const button = document.querySelector('button');
+button.addEventListener('click', printer.showMessage);
 //# sourceMappingURL=Decorators.js.map
