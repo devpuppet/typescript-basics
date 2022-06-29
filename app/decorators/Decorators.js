@@ -10,9 +10,16 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 let Product = class Product {
     constructor(title, _price) {
         this._price = _price;
+        this._title = "Random product";
         this._title = title;
     }
     ;
+    get title() {
+        return this._title;
+    }
+    get price() {
+        return this._price;
+    }
     set price(value) {
         if (value <= 0) {
             throw new Error('Price should be positive number');
@@ -34,15 +41,22 @@ __decorate([
     __param(0, DecoratorParameter)
 ], Product.prototype, "getPriceWithTax", null);
 Product = __decorate([
-    DecoratorClass('<h1>Class Decorator</h1>', 'ABC')
+    DecoratorClass('<h1>Title</h1><h2>Price</h2>', 'ABC')
 ], Product);
 function DecoratorClass(template, hookId) {
     console.log('Class decorator');
-    return function (_) {
-        const element = document.getElementById(hookId);
-        if (element) {
-            element.innerHTML = template;
-        }
+    return function (originalConstructor) {
+        return class extends originalConstructor {
+            constructor(...originalConstructorArguments) {
+                super(originalConstructorArguments[0], originalConstructorArguments[1]);
+                const element = document.getElementById(hookId);
+                if (element) {
+                    element.innerHTML = template;
+                    element.querySelector('h1').textContent = 'Title: ' + this.title;
+                    element.querySelector('h2').textContent = 'Price: ' + this.price.toString();
+                }
+            }
+        };
     };
 }
 function DecoratorProperty(target, propertyName) {
@@ -61,4 +75,5 @@ function DecoratorParameter(target, name, position) {
     console.log('Parameter decorator');
     console.log(target, name, position);
 }
+const product = new Product('Tooth paste', 1.23);
 //# sourceMappingURL=Decorators.js.map

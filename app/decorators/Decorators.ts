@@ -1,11 +1,19 @@
-@DecoratorClass('<h1>Class Decorator</h1>', 'ABC')
+@DecoratorClass('<h1>Title</h1><h2>Price</h2>', 'ABC')
 class Product {
     @DecoratorProperty
-    private _title: string;
+    private _title: string = "Random product";
 
     constructor(title: string, private _price: number) {
         this._title = title;
     };
+
+    get title() {
+        return this._title;
+    }
+
+    get price() {
+        return this._price;
+    }
 
     @DecoratorAccessor
     set price(value: number) {
@@ -23,11 +31,18 @@ class Product {
 
 function DecoratorClass(template: string, hookId: string) {
     console.log('Class decorator');
-    return function(_: Function) {
-        const element = document.getElementById(hookId);
-        if (element) {
-            element.innerHTML = template;
-        }
+    return function<T extends { new (...args: any[]): { title: string, price: number }}>(originalConstructor: T) {
+        return class extends originalConstructor {
+            constructor(...originalConstructorArguments: any[]) {
+                super(originalConstructorArguments[0], originalConstructorArguments[1]);
+                const element = document.getElementById(hookId);
+                if (element) {
+                element.innerHTML = template;
+                element.querySelector('h1').textContent = 'Title: ' + this.title;
+                element.querySelector('h2').textContent = 'Price: ' + this.price.toString();
+                }
+            }
+        };
     }
 }
 
@@ -50,3 +65,5 @@ function DecoratorParameter(target: string, name: string, position: number) {
     console.log('Parameter decorator');
     console.log(target, name, position);
 }
+
+const product = new Product('Tooth paste', 1.23);
