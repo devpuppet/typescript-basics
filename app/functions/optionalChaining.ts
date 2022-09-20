@@ -11,5 +11,5 @@ const userDataWithJob = {
     }
 };
 
-console.log("Data without job: " + userDataWithoutJob?.job?.title);
+// console.log("Data without job: " + userDataWithoutJob?.job?.title);
 console.log("Data with job: " + userDataWithJob?.job?.title);
