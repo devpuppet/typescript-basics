@@ -1,10 +1,25 @@
 {
     "compilerOptions": {
       "target": "es6",
+      "module": "es2015",
+      "lib": [
+        "dom",
+        "es6",
+        "dom.iterable",
+        "scripthost"
+      ],  
       "watch": true,
       // "module": "commonjs", // to make exports work in the browser
       "sourceMap": true,
-      "lib": ["dom", "es2017"],
-      "experimentalDecorators": true
-    }
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": true,
+      "moduleResolution": "node",
+      "outDir": "./dist",
+      "allowJs": false,
+      // "strict": true,
+      "esModuleInterop": true
+    },
+    "exclude": [
+      "node_modules"
+    ]
   }
